@@ -17,7 +17,7 @@ process.on("unhandledRejection", (reason, p) => {
 });
 
 const api = async (req, res) => {
-    const data = await fetch();
+    const data = await fetch(req.query.countries);
     res.status(200).json(data);
 };
 
